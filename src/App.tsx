@@ -46,10 +46,13 @@ export default function App() {
       y: CANVAS_MARING,
     });
     stage.add(layer);
-
     setSpinning(false);
     const drawFrame = () => {
       layer.destroyChildren();
+      layer.scale({
+        x: zoomRef.current / 100,
+        y: zoomRef.current / 100,
+      });
       renderText(layer, editorRef);
       renderBaseLine(layer, editorRef);
       renderBorder(layer, editorRef);
