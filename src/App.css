@@ -1,0 +1,59 @@
+canvas {
+  border: 1px solid #eee;
+}
+canvas:focus {
+  border: 1px solid green;
+}
+.focus-target {
+  position: fixed;
+  width: 1px;
+  contain: strict;
+  z-index: -1;
+  opacity: 0;
+}
+body {
+  user-select: none;
+  position: relative;
+  margin: 0;
+}
+
+.page {
+  display: flex;
+}
+.page-pannel {
+  margin-left: 1px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+  overflow: scroll;
+}
+
+.ant-tooltip-content {
+  font-size: 11px;
+}
+.ant-tooltip-inner {
+  padding: 2px 4px;
+}
+#_textEditorInput {
+  position: absolute;
+  display: block;
+  width: 1px;
+  z-index: -1;
+  opacity: 0;
+}
+.zoom {
+  position: fixed;
+  bottom: 15px;
+  left: 15px;
+  padding: 2px 10px;
+  background-color: #efefef;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 70px;
+  height: 20px;
+  color: #aaa;
+  font-size: 12px;
+  border-radius: 6px;
+}
